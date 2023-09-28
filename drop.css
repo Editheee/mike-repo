@@ -1,0 +1,80 @@
+:root{
+    --background-gradient:linear-gradient(30deg,#f39c12 30%);
+    --gray:#34495e;
+    --darkgray:#2c3e50
+}
+
+select{
+    /*reset select*/
+    appearance:none;
+    outline:0;
+    border:0;
+    box-shadow: none;
+    /*personalise*/
+
+flex:1;
+padding: 0 1em;
+color:#fff;
+background-color: var(--darkgray);
+background-image:none ;
+cursor: pointer;
+}
+
+/*remove IE arrow*/
+.select::-ms-expand{
+display: none;
+}
+
+/*custom select wrapper*/
+
+.select{
+    position: relative;
+    display: flex;
+    height: 3em;
+    width: 20em;
+    border-radius: .25em;
+    overflow: hidden;
+}
+
+    /*arrow*/
+    .select::after{
+        content:'\25BC';
+        position: absolute;
+        top:0;
+        right: 0;
+        padding: 1em;
+        background-color: #34495e;
+        transition: 25s all ease;
+        pointer-events: none;
+
+    }
+
+      /*transition*/
+      .select:hover::after{
+        color: #f39c12;
+      }
+
+        /*other styles*/
+        body{
+            color:black;
+            background-color:orange;
+           width:400px;
+           height: 200px;
+           border:5px solid red;
+        }
+      
+
+
+        h1{
+            margin: 0 0 0.25em;
+        }
+
+        a{
+            font-weight: bold;
+            color: var(--gray);
+            text-decoration: none;
+            padding: .25em;
+            background: white;
+
+        }
+
